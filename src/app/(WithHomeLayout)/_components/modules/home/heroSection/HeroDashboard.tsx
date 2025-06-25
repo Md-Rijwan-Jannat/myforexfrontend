@@ -128,7 +128,7 @@ export default function HeroDashboard() {
         {/* Main Content */}
         <div className="flex-1 px-2 md:pl-8 md:pr-3 py-2 overflow-hidden">
           {/* Header */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3 gap-3">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2.5 gap-3">
             <div className="flex-1 flex items-center gap-2 bg-white/5 border border-white/3 rounded-lg px-3 py-2 backdrop-blur-md md:max-w-[180px] w-full">
               <IoSearch size={20} className="text-gray-400/80 mb-[1px]" />
               <input
