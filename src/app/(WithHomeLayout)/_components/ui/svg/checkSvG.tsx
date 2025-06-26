@@ -84,3 +84,21 @@ export const CheckSVG = ({ className }: { className?: string }) => (
     </defs>
   </svg>
 );
+
+export const MarkSVG = () => (
+  <svg
+    width="25"
+    height="24"
+    viewBox="0 0 25 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4.52515 13.125L9.77515 18.375L20.2751 7.125"
+      stroke="white"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);

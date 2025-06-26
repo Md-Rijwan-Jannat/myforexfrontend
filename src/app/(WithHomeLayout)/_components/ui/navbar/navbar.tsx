@@ -95,7 +95,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-2 md:px-4">
         <div className="flex h-[52px] items-center justify-between relative">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center -ml-2 md:-ml-4">
             <BrandLogo />
           </div>
 

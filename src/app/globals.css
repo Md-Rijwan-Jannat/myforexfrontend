@@ -34,8 +34,26 @@
 .pricing-shadow2 {
   box-shadow: 0px 0px 20px 0px #ffffff66 inset;
 }
+.best-pricing-shadow {
+  box-shadow: 0px 0px 30px 0px #ffffff66 inset;
+
+  backdrop-filter: blur(50px);
+}
 .pricing-gradient {
   background: linear-gradient(102.71deg, #5c35ee 36.13%, #664782 92.55%);
+}
+
+/* Button */
+.btn-border {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    102.71deg,
+    #5c35ee 36.13%,
+    #664782 92.55%
+  );
+}
+.btn-shadow {
+  box-shadow: 0px 0px 20px 0px #983feb inset;
 }
 
 body {

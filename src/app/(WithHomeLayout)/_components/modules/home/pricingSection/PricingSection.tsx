@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import SectionHeader from "../../../ui/SectionHeader";
 import { FaArrowRight } from "react-icons/fa6";
 import { CheckSVG } from "../../../ui/svg/checkSvG";
+import BestPlan from "./BestPlan";
 
 /* ───────── animation variants ────────── */
 const container: Variants = {
@@ -307,7 +308,7 @@ const plans = [
 
 export default function PricingSection() {
   return (
-    <div className="max-w-7xl mx-auto px-2 md:px-0 py-12">
+    <div className="max-w-7xl mx-auto px-2 md:px-5">
       <SectionHeader
         icon={
           <svg
@@ -439,6 +440,7 @@ export default function PricingSection() {
           </motion.div>
         ))}
       </motion.div>
+      <BestPlan />
     </div>
   );
 }
