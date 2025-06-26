@@ -13,17 +13,17 @@ import HeroRightBottomBottomBorder from "../../../ui/svg/HeroRightBottomBottomBo
 
 export default function HeroSection() {
   return (
-    <div className="w-full relative overflow-hidden max-w-7xl mx-auto">
+    <div className="w-full relative overflow-hidden mx-auto">
       <div className="absolute top-0 -left-9">
         <HeroLeftBorder />
       </div>
       <div className="absolute top-0 left-[200px]">
         <HeroLeftRightBorder />
       </div>
-      <div className="absolute top-[82px] right-0">
+      <div className="absolute hidden md:block  top-[82px] right-0">
         <HeroRightLeftBorder />
       </div>
-      <div className="absolute top-[140px] -right-0 overflow-hidden">
+      <div className="absolute hidden md:block top-[140px] -right-0 overflow-hidden">
         <HeroRightBorder />
       </div>
       <div className="flex items-center justify-center -mt-[115px] z-20">
