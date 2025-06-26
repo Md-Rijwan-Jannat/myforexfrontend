@@ -20,7 +20,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
         whileTap={{ scale: 0.98 }}
         transition={{ duration: 0.2 }}
       >
-        <div className="absolute top-0 rounded-lg right-0 w-full h-full   bg-gradient-to-bl from-primary/70 via-transparent to-transparent rounded-tr-lg pointer-events-none"></div>
+        <div className="absolute top-0 rounded-lg right-0 w-full h-full bg-gradient-to-bl from-primary/70 via-transparent to-transparent rounded-tr-lg pointer-events-none"></div>
         <div className="absolute bottom-0 rounded-lg left-0 w-full h-full bg-gradient-to-tr from-primary/70 via-transparent to-transparent rounded-bl-lg pointer-events-none"></div>
         <div className="bg-[#050505] rounded-md relative z-10 w-full h-full">
           <div className="relative z-10 bg-primary/5 rounded-md p-3 h-full">

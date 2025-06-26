@@ -1,9 +1,25 @@
 import HeroSection from "./_components/modules/home/heroSection/HeroSection";
+import PricingSection from "./_components/modules/home/pricingSection/PricingSection";
+import SectionHeader from "./_components/ui/SectionHeader";
 
 export default function Home() {
   return (
     <div className="px-2 md:px-0 overflow-hidden">
       <HeroSection />
+      <PricingSection />
+      {/* // Left aligned with custom spacing */}
+      <SectionHeader />
+      <SectionHeader
+        align="left"
+        title="About Us"
+        subtitle="Who We Are"
+        stack="row"
+        justify="between"
+      />
+
+      <SectionHeader align="center" title="Our Pricing" subtitle="Pricing" />
+
+      <SectionHeader align="right" title="Contact Info" subtitle="Reach Out" />
     </div>
   );
 }
