@@ -1,15 +1,15 @@
-import React from 'react';
-import HeroTitle from '../../../ui/svg/HeroTitle';
-import HeroLeftRightBorder from '../../../ui/svg/HeroLeftRightBorder';
-import HeroRightLeftBorder from '../../../ui/svg/HeroRightLeftBorder';
-import HeroRightBorder from '../../../ui/svg/HeroRightBorder';
-import HeroGradient from '../../../ui/svg/HeroGradient';
-import HeroDashboard from '../heroSection/HeroDashboard';
-import HeroBottomLeftGradient from '../../../ui/svg/HeroBottomLeftGradient';
-import HeroLeftBorder from '../../../ui/svg/HeroLeftBorder';
-import HeroLeftBottomBottomBorder from '../../../ui/svg/HeroLeftBottomBottomBorder';
-import HeroLeftBottomTopBorder from '../../../ui/svg/HeroLeftBottomTopBorder';
-import HeroRightBottomBottomBorder from '../../../ui/svg/HeroRightBottomBottomBorder';
+import React from "react";
+import HeroTitle from "../../../ui/svg/HeroTitle";
+import HeroLeftRightBorder from "../../../ui/svg/HeroLeftRightBorder";
+import HeroRightLeftBorder from "../../../ui/svg/HeroRightLeftBorder";
+import HeroRightBorder from "../../../ui/svg/HeroRightBorder";
+import HeroGradient from "../../../ui/svg/HeroGradient";
+import HeroDashboard from "../heroSection/HeroDashboard";
+import HeroBottomLeftGradient from "../../../ui/svg/HeroBottomLeftGradient";
+import HeroLeftBorder from "../../../ui/svg/HeroLeftBorder";
+import HeroLeftBottomBottomBorder from "../../../ui/svg/HeroLeftBottomBottomBorder";
+import HeroLeftBottomTopBorder from "../../../ui/svg/HeroLeftBottomTopBorder";
+import HeroRightBottomBottomBorder from "../../../ui/svg/HeroRightBottomBottomBorder";
 
 export default function HeroSection() {
   return (
@@ -23,7 +23,6 @@ export default function HeroSection() {
       <div className="absolute hidden md:block  top-[82px] right-0">
         <HeroRightLeftBorder />
       </div>
-      <div className="absolute hidden md:block top-[140px] -right-0 overflow-hidden">
       <div className="absolute hidden md:block top-[140px] -right-0 overflow-hidden">
         <HeroRightBorder />
       </div>
