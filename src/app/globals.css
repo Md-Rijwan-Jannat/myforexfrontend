@@ -19,6 +19,8 @@
   }
 }
 
+/* Put *your* rules after Tailwind so they win the cascade */
+
 .dashboard-shadow {
   box-shadow: 0px 0px 30px 0px #ffffff33 inset;
   backdrop-filter: blur(50px);

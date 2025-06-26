@@ -100,7 +100,7 @@ export default function HeroDashboard() {
   ];
 
   return (
-    <div className="min-h-fit bg-transparent max-w-5xl w-full mx-auto border border-white/10 dashboard-shadow rounded-[20px] p-2 md:p-6 -mt-[180px] md:mt-0">
+    <div className="min-h-fit bg-transparent max-w-5xl w-full mx-auto border border-white/10 dashboard-shadow pricing-shadow rounded-[20px] p-2 md:p-6 -mt-[180px] md:mt-0">
       <div className="flex border-[2px] border-white/20 rounded-[20px]">
         {/* Sidebar */}
         <div className="w-[40px] md:w-[200px] bg-white/1 border-r border-white/10 min-h-fit p-2 flex flex-col items-center relative">
