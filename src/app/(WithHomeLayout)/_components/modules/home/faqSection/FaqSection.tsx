@@ -117,7 +117,9 @@ export default function FaqSection() {
             </button>
 
             {/* divider */}
-            <div className="border-b border-white/10 w-full" />
+            {idx !== faqs.length - 1 && (
+              <div className="border-b border-white/8 w-full" />
+            )}
 
             {/* answer */}
             <AnimatePresence initial={false}>
