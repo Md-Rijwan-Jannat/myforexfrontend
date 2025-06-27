@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import SectionHeader from "../../../ui/SectionHeader";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { FiMinus, FiPlus } from "react-icons/fi";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
+/* ----------  sample Q&A  ---------- */
 const faqs = [
   {
     question: "What is your refund policy?",
@@ -37,15 +39,40 @@ const faqs = [
   },
 ];
 
+/* ----------  motion variants  ---------- */
+const listVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const answerVariants: Variants = {
+  hidden: { height: 0, opacity: 0 },
+  visible: {
+    height: "auto",
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
+  exit: {
+    height: 0,
+    opacity: 0,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
+};
+
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const handleToggle = (idx: number) => {
+  const handleToggle = (idx: number) =>
     setOpenIndex(openIndex === idx ? null : idx);
-  };
 
   return (
     <div className="max-w-7xl mx-auto px-2 md:px-5 flex flex-col md:flex-row items-start justify-between gap-10 pt-10 md:pt-[150px]">
+      {/* ----------  heading block  ---------- */}
       <div className="w-full md:w-1/3">
         <SectionHeader
           align="left"
@@ -56,10 +83,18 @@ export default function FaqSection() {
           marginTop="-mt-[160px]"
         />
       </div>
-      {/* Faq */}
-      <div className="w-full md:w-1/2 max-h-[400px]">
+
+      {/* ----------  animated QA list  ---------- */}
+      <motion.div
+        className="w-full md:w-1/2 h-[400px]"
+        variants={listVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         {faqs.map((faq, idx) => (
-          <div key={idx} className="w-full">
+          <motion.div key={idx} className="w-full" variants={itemVariants}>
+            {/* toggle button */}
             <button
               className="w-full flex items-center justify-between py-5 text-left focus:outline-none"
               aria-expanded={openIndex === idx}
@@ -70,26 +105,41 @@ export default function FaqSection() {
               <span className="text-white text-base md:text-[16px] font-medium tracking-wide">
                 {faq.question}
               </span>
-              <span className="ml-4 text-white/80 text-xl flex items-center justify-center">
+
+              {/* plus ↔ minus icon with a snappy rotate */}
+              <motion.span
+                className="ml-4 text-white/80 text-xl flex items-center justify-center"
+                animate={{ rotate: openIndex === idx ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 {openIndex === idx ? <FiMinus /> : <FiPlus />}
-              </span>
+              </motion.span>
             </button>
+
+            {/* divider */}
             <div className="border-b border-white/10 w-full" />
-            <div
-              id={`faq-answer-${idx}`}
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openIndex === idx
-                  ? "max-h-40 opacity-100 py-3"
-                  : "max-h-0 opacity-0 py-0"
-              }`}
-            >
-              <div className="text-white/70 text-sm md:text-base pl-1 pr-8">
-                {faq.answer}
-              </div>
-            </div>
-          </div>
+
+            {/* answer */}
+            <AnimatePresence initial={false}>
+              {openIndex === idx && (
+                <motion.div
+                  id={`faq-answer-${idx}`}
+                  key="content"
+                  className="overflow-hidden pl-1 pr-8"
+                  variants={answerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <div className="text-white/70 text-sm md:text-base py-3">
+                    {faq.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

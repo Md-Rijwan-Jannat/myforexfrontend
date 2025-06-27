@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="mt-20 overflow-hidden mb-2">
-      <div className="footer-shadow rounded-[20px] p-2.5 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-2 md:px-5">
+      <div className="footer-shadow rounded-[20px] p-2.5 flex flex-col md:flex-row justify-between gap-5 items-center max-w-7xl mx-auto px-2 md:px-5">
         <div>
           <BrandLogo className="w-28 md:w-full " />
         </div>
@@ -26,7 +26,7 @@ export default function Footer() {
             Testimonials
           </Link>
         </div>
-        <div className="flex flex-row items-center gap-4 mr-3">
+        <div className="flex flex-row items-center gap-4 mr-3 mb-3 md:mb-0">
           <Link href={"#"}>
             <svg
               width="20"
@@ -99,7 +99,7 @@ export default function Footer() {
       </div>
 
       <div className="relative">
-        <div className="-mt-6">
+        <div className="-mt-6 hidden md:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="221"
@@ -116,7 +116,7 @@ export default function Footer() {
             ></path>
           </svg>{" "}
         </div>
-        <div className="-mt-14">
+        <div className="-mt-14 hidden md:block">
           <svg
             width="409"
             height="158"
@@ -133,7 +133,7 @@ export default function Footer() {
             />
           </svg>
         </div>
-        <div className="flex items-center justify-center opacity-45 max-w-7xl mx-auto px-2 md:px-5 -mt-[150px]">
+        <div className="flex items-center justify-center opacity-45 max-w-7xl mx-auto px-2 md:px-5 md:-mt-[150px]">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -161,8 +161,8 @@ export default function Footer() {
             </defs>
           </svg>
         </div>
-        <div className="absolute right-0 top-0">
-          <div className="w-full ml-[120px]">
+        <div className="absolute right-0 top-0 hidden md:block">
+          <div className="w-full ml-[170px]">
             {" "}
             <svg
               width="30"
@@ -181,7 +181,7 @@ export default function Footer() {
             </svg>
           </div>
 
-          <div className="w-full -mr-[100px]">
+          <div className="w-full -mr-[40px] -mt-[50px]">
             <svg
               width="234"
               height="129"
