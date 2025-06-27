@@ -1,34 +1,67 @@
-import React from "react";
-import BrandLogo from "../brandLogo";
-import Link from "next/link";
+"use client";
 
-// Footer
+import React from "react";
+import Link from "next/link";
+import BrandLogo from "../brandLogo";
+import { motion, Variants } from "framer-motion";
+
+/* ------------ motion variants ------------ */
+const container: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut", staggerChildren: 0.15 },
+  },
+};
+
+const item: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 export default function Footer() {
   return (
-    <div className="mt-20 overflow-hidden mb-2">
-      <div className="footer-shadow rounded-[20px] p-2.5 flex flex-col md:flex-row justify-between gap-5 items-center max-w-7xl mx-auto px-2 md:px-5">
-        <div>
-          <BrandLogo className="w-28 md:w-full " />
-        </div>
-        <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center ">
-          <Link className="tracking-wide" href={"#"}>
-            Integrations
-          </Link>
-          <Link className="tracking-wide" href={"#"}>
-            Pricing
-          </Link>
-          <Link className="tracking-wide" href={"#"}>
-            FAQs
-          </Link>
-          <Link className="tracking-wide" href={"#"}>
-            Contact Us
-          </Link>
-          <Link className="tracking-wide" href={"#"}>
-            Testimonials
-          </Link>
-        </div>
-        <div className="flex flex-row items-center gap-4 mr-3 mb-3 md:mb-0">
+    <motion.div
+      className="mt-20 overflow-hidden mb-2"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      {/* ───────── primary footer bar ───────── */}
+      <motion.div
+        variants={item}
+        className="footer-shadow rounded-[20px] p-2.5 flex flex-col md:flex-row justify-between gap-5 items-center max-w-7xl mx-auto px-2 md:px-5"
+      >
+        {/* logo */}
+        <motion.div variants={item}>
+          <BrandLogo className="w-28 md:w-full" />
+        </motion.div>
+
+        {/* navigation links */}
+        <motion.nav
+          variants={item}
+          className="flex flex-col md:flex-row gap-5 md:gap-10 items-center"
+        >
+          {[
+            "Integrations",
+            "Pricing",
+            "FAQs",
+            "Contact Us",
+            "Testimonials",
+          ].map((label) => (
+            <Link key={label} href="#" className="tracking-wide">
+              {label}
+            </Link>
+          ))}
+        </motion.nav>
+
+        {/* social icons */}
+        <motion.div
+          variants={item}
+          className="flex flex-row items-center gap-4 mr-3 mb-3 md:mb-0"
+        >
           <Link href={"#"}>
             <svg
               width="20"
@@ -97,11 +130,13 @@ export default function Footer() {
               />
             </svg>
           </Link>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="relative">
-        <div className="-mt-6 hidden md:block">
+      {/* ───────── decorative strokes (GPU-layer & no stray text nodes) ───────── */}
+      <div className="relative pointer-events-none select-none">
+        {/* short left strokes */}
+        <div className="-mt-6 hidden md:block transform-gpu will-change-transform">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="221"
@@ -115,10 +150,11 @@ export default function Footer() {
               strokeWidth="2"
               d="M-89 0h207.431a40 40 0 0 1 28.285 11.716L220 85"
               opacity="0.1"
-            ></path>
-          </svg>{" "}
+            />
+          </svg>
         </div>
-        <div className="-mt-14 hidden md:block">
+
+        <div className="-mt-14 hidden md:block transform-gpu will-change-transform">
           <svg
             width="409"
             height="158"
@@ -130,13 +166,14 @@ export default function Footer() {
               opacity="0.1"
               d="M-75 1H43.431C54.04 1 64.214 5.2143 71.716 12.7157L210.784 151.784C218.286 159.286 228.46 163.5 239.069 163.5H407.5"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
+              strokeWidth="2"
+              strokeLinecap="round"
             />
           </svg>
         </div>
-        <div className="flex items-center justify-center opacity-45 max-w-7xl mx-auto px-2 md:px-5 md:-mt-[150px]">
-          {" "}
+
+        {/* big center word-mark */}
+        <div className="flex items-center justify-center opacity-45 max-w-7xl mx-auto px-2 md:px-5 md:-mt-[150px] transform-gpu will-change-transform">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="932"
@@ -163,9 +200,10 @@ export default function Footer() {
             </defs>
           </svg>
         </div>
+
+        {/* right-side strokes */}
         <div className="absolute right-0 top-0 hidden md:block">
-          <div className="w-full ml-[170px]">
-            {" "}
+          <div className="w-full ml-[170px] transform-gpu will-change-transform">
             <svg
               width="30"
               height="129"
@@ -177,13 +215,13 @@ export default function Footer() {
                 opacity="0.1"
                 d="M119 367V135.069C119 124.46 114.79 114.286 107.28 106.784L1.5 1"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </svg>
           </div>
 
-          <div className="w-full -mr-[40px] -mt-[50px]">
+          <div className="w-full -mr-[40px] -mt-[50px] transform-gpu will-change-transform">
             <svg
               width="234"
               height="129"
@@ -195,13 +233,13 @@ export default function Footer() {
                 opacity="0.1"
                 d="M266.5 372V178.569C266.5 167.96 262.29 157.786 254.78 150.284L117.22 12.7157C109.71 5.2143 99.5401 1 88.9301 1H1"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </svg>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
