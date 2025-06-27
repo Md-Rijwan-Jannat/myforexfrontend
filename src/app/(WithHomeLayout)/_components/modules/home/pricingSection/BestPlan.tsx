@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import BrandLogo from "../../../ui/brandLogo";
 import { MarkSVG } from "../../../ui/svg/checkSvG";
 import PricingGradient from "../../../ui/svg/PricingGradient";
+import SectionHeader from "../../../ui/SectionHeader";
 
 const planTypes = [
   {
@@ -381,13 +382,13 @@ export default function BestPlan() {
             variants={fadeInUp}
             className="max-w-4xl w-full text-left mb-8"
           >
-            <h1 className="text-xl md:text-[44px] text-white mb-2">
-              Choose the Best Plan
-            </h1>
-            <p className="text-white/60 text-base md:text-[16px] max-w-xl">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page.
-            </p>
+            <SectionHeader
+              title="Choose the Best Plan"
+              description="It is a long established fact that a reader will be distracted by
+              the readable content of a page."
+              align="left"
+              gradientHidden={true}
+            />
           </motion.div>
 
           {/* Toggles */}
