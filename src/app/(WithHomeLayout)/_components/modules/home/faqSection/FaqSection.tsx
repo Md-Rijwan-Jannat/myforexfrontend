@@ -56,6 +56,7 @@ export default function FaqSection() {
           marginTop="-mt-[160px]"
         />
       </div>
+      {/* Faq */}
       <div className="w-full md:w-1/2 max-h-[400px]">
         {faqs.map((faq, idx) => (
           <div key={idx} className="w-full">
