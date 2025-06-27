@@ -76,7 +76,7 @@ export default function ReviewSection() {
   };
 
   return (
-    <div className="w-screen relative px-2 md:px-5 overflow-x-hidden mt-12 md:mt-[150px]">
+    <div className="w-screen relative px-2 md:px-5 mt-12 md:mt-[150px]">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           align="left"
@@ -137,7 +137,7 @@ export default function ReviewSection() {
           {[...reviews, ...reviews].map((review, i) => (
             <div
               key={i}
-              style={{ minWidth: 373, maxWidth: 373 }}
+              style={{ minWidth: 350, maxWidth: 350 }}
               className="mx-2"
             >
               <ReviewCard {...review} />

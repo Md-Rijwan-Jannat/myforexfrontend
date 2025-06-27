@@ -310,6 +310,9 @@ export default function PricingSection() {
   return (
     <div className="max-w-7xl mx-auto px-2 md:px-5">
       <SectionHeader
+        title="Our Pricing."
+        description="It is a long established fact that a reader will be distracted by the readable content of a page."
+        subtitle="Pricing"
         icon={
           <svg
             width="19"
@@ -370,7 +373,7 @@ export default function PricingSection() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="flex flex-col md:flex-row gap-6 justify-center my-10"
+        className="flex flex-col lg:flex-row gap-5 justify-center my-10"
       >
         {plans.map((plan) => (
           <motion.div
@@ -383,7 +386,7 @@ export default function PricingSection() {
             }}
             whileTap={{ scale: 0.97 }}
             className={`
-              rounded-[20px] p-[28px] pt-[36px] flex-1 pricing-shadow
+              rounded-[20px] p-[28px] pt-[36px] max-w-fit flex-1 pricing-shadow
               ${
                 plan.highlight
                   ? "hover:pricing-gradient text-white"
