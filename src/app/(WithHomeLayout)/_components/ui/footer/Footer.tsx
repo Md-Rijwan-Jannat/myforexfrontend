@@ -2,6 +2,8 @@ import React from "react";
 import BrandLogo from "../brandLogo";
 import Link from "next/link";
 
+// Footer
+
 export default function Footer() {
   return (
     <div className="mt-20 overflow-hidden mb-2">
