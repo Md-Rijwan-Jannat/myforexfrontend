@@ -21,13 +21,13 @@
   }
 }
 
-/* Put *your* rules after Tailwind so they win the cascade */
-
+/* Hero section css */
 .dashboard-shadow {
   box-shadow: 0px 0px 30px 0px #ffffff33 inset;
   backdrop-filter: blur(50px);
 }
 
+/* Pricing section css */
 .pricing-shadow {
   box-shadow: 0px 0px 50px 0px #ffffff66 inset;
 }
@@ -36,21 +36,23 @@
 }
 .best-pricing-shadow {
   box-shadow: 0px 0px 30px 0px #ffffff66 inset;
-
   backdrop-filter: blur(50px);
 }
 .pricing-gradient {
   background: linear-gradient(102.71deg, #5c35ee 36.13%, #664782 92.55%);
 }
-.footer-shadow {
-  box-shadow: 0px 0px 30px 0px #ffffff33 inset;
-}
 
+/* Nes letter */
 .news-letter-shadow {
   box-shadow: 0px 0px 30px 0px #ffffff4d inset;
 }
 .input-shadow {
   box-shadow: 0px 0px 20px 0px #ffffff1a inset;
+}
+
+/* Footer css  */
+.footer-shadow {
+  box-shadow: 0px 0px 30px 0px #ffffff33 inset;
 }
 
 /* Button */
