@@ -13,6 +13,7 @@ interface SectionHeaderProps {
   stack?: "col" | "row";
   justify?: "start" | "center" | "between";
   gradientHidden?: boolean;
+  marginTop?: string;
 }
 
 export default function SectionHeader({
@@ -26,6 +27,7 @@ export default function SectionHeader({
   stack = "col",
   justify = "center",
   gradientHidden = false,
+  marginTop,
 }: SectionHeaderProps) {
   /* wrapper cross-axis alignment */
   const alignment =
@@ -38,7 +40,7 @@ export default function SectionHeader({
   /* flex direction + justify for title/description */
   const stackClasses = clsx(
     "flex gap-2",
-    stack === "col" ? "flex-col" : "flex-row w-full",
+    stack === "col" ? "flex-col" : "flex-col md:flex-row w-full",
     justify === "center"
       ? "justify-center"
       : justify === "between"
@@ -60,7 +62,7 @@ export default function SectionHeader({
       : ""; // row layout → no auto margin
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className={`max-w-7xl mx-auto ${marginTop}`}>
       <div className={`${gradientHidden ? "hidden" : "block"}`}>
         <SectionGradient />
       </div>
@@ -85,7 +87,7 @@ export default function SectionHeader({
 
         {/* title + description */}
         <div className={clsx(stackClasses, verticalAlign)}>
-          <h2 className="text-white text-[44px] whitespace-pre-wrap">
+          <h2 className="text-white text-[32px] md:text-[44px] whitespace-pre-wrap">
             {title}
           </h2>
 
