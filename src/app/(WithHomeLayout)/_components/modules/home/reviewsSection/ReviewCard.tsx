@@ -4,18 +4,18 @@ import { FaXTwitter } from "react-icons/fa6";
 interface ReviewCardProps {
   name?: string;
   role?: string;
-  review?: string;
+  reviews?: string;
   icon?: React.ReactNode;
 }
 
 export default function ReviewCard({
   name = "John Appleseed",
   role = "Founder & CEO",
-  review = "It is a long established fact that a reader will be distracted by the readable content of a page.",
+  reviews = "It is a long established fact that a reader will be distracted by the readable content of a page.",
   icon = <FaXTwitter />,
 }: ReviewCardProps) {
   return (
-    <div className="review-card-shadow rounded-[14px] p-8 flex flex-col items-start space-y-8">
+    <div className="reviews-card-shadow bg-[#141517]/20 rounded-[14px] p-9 flex flex-col items-start space-y-8 max-h-[240px] h-full">
       <h3>
         <svg
           width="14"
@@ -30,13 +30,17 @@ export default function ReviewCard({
           />
         </svg>
       </h3>
-      <p className="text-[14px] leading-[20px] text-white/90">{review}</p>
+      <p className="text-[14px] leading-[20px] text-white/70 tracking-wide">
+        {reviews}
+      </p>
       <div className="flex items-center justify-between w-full">
         <div className="flex items-start flex-col space-y-1">
-          <h2 className="text-[16px] font-semibold leading-[18px]">{name}</h2>
-          <span className="text-[14px] font-normal text-white/90">{role}</span>
+          <h2 className="text-[15px] font-semibold leading-[15px]">{name}</h2>
+          <span className="text-[14px] font-normal text-white/70 tracking-wide">
+            {role}
+          </span>
         </div>
-        <div className="review-card-shadow rounded-[10px] p-1 size-10 flex items-center justify-center">
+        <div className="reviews-card-shadow rounded-[10px] p-1 size-10 flex items-center justify-center">
           {icon}
         </div>
       </div>

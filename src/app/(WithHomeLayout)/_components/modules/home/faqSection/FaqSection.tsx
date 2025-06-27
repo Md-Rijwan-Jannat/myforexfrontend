@@ -45,7 +45,7 @@ export default function FaqSection() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-2 md:px-5 flex flex-col md:flex-row items-start justify-between gap-10 mt-20 md:mt-28">
+    <div className="max-w-7xl mx-auto px-2 md:px-5 flex flex-col md:flex-row items-start justify-between gap-10 pt-10 md:pt-[150px]">
       <div className="w-full md:w-1/3">
         <SectionHeader
           align="left"

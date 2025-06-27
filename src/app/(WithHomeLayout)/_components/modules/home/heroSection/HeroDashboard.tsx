@@ -202,7 +202,7 @@ export default function HeroDashboard() {
               <HeroGradient className="max-w-[550px]" />
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mt-7 mb-4">
-              <h2 className="text-white font-semibold text-[30px] tracking-wide backdrop-opacity-0">
+              <h2 className="text-white font-[600] text-[30px] tracking-wide backdrop-opacity-0">
                 Account Details
               </h2>
               <div className="flex items-center gap-2 border border-white/10 rounded bg-[#1d1d1e] backdrop-opacity-0 px-3 py-2">
@@ -227,7 +227,7 @@ export default function HeroDashboard() {
                 {/* Stats Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {/* Total Earned Card */}
-                  <div className="flex flex-col items-start justify-between gap-4 bg-gradient-to-r from-[#5C35EE]/80 to-[#644490]/60 backdrop-blur-md border border-purple-500/10 rounded-xl py-3 px-4 shadow-lg">
+                  <div className="flex flex-col items-start justify-between gap-4 pricing-gradient backdrop-blur-md border border-purple-500/10 rounded-xl py-3 px-4 shadow-lg">
                     <div className="bg-white/10 rounded p-2">
                       <LuChartColumn className="size-4" />
                     </div>
@@ -249,7 +249,7 @@ export default function HeroDashboard() {
                     </div>
                   </div>
                   {/* Total Payout Card */}
-                  <div className="flex flex-col items-start justify-between gap-4 bg-[#0a0a0a] backdrop-blur-md rounded-xl py-2.5 px-4 shadow-lg">
+                  <div className="flex flex-col items-start justify-between gap-4 bg-[#09090a]/70 backdrop-blur-md rounded-xl py-2.5 px-4 shadow-lg">
                     <div className="bg-[#1a153b] rounded p-2">
                       <IoMdFolderOpen className="size-4 text-indigo-500" />
                     </div>

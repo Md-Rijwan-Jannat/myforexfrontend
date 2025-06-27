@@ -3,54 +3,57 @@
 import React, { useRef, useState } from "react";
 import SectionHeader from "../../../ui/SectionHeader";
 import ReviewCard from "./ReviewCard";
+import HeroLeftBottomTopBorder from "../../../ui/svg/HeroLeftBottomTopBorder";
+import HeroLeftBottomBottomBorder from "../../../ui/svg/HeroLeftBottomBottomBorder";
 
-// 8 review data objects
+// 8 reviews data objects
 const reviews = [
   {
     name: "John Appleseed",
     role: "Founder & CEO",
-    review:
+    reviews:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
   },
   {
     name: "Jane Doe",
     role: "Product Manager",
-    review:
+    reviews:
       "The team was very professional and delivered everything on time. Highly recommended!",
   },
   {
     name: "Michael Smith",
     role: "Lead Developer",
-    review: "Their attention to detail and commitment to quality is unmatched.",
+    reviews:
+      "Their attention to detail and commitment to quality is unmatched.",
   },
   {
     name: "Emily Johnson",
     role: "UI/UX Designer",
-    review:
+    reviews:
       "A wonderful experience from start to finish. The design exceeded my expectations!",
   },
   {
     name: "Chris Lee",
     role: "Marketing Head",
-    review:
+    reviews:
       "We saw a significant boost in our engagement after working with them.",
   },
   {
     name: "Sara Wilson",
     role: "Business Analyst",
-    review:
+    reviews:
       "Their insights and strategies helped us grow our business rapidly.",
   },
   {
     name: "David Kim",
     role: "CTO",
-    review:
+    reviews:
       "Reliable, efficient, and always available for support. Great partners!",
   },
   {
     name: "Linda Brown",
     role: "HR Manager",
-    review: "The process was smooth and communication was clear throughout.",
+    reviews: "The process was smooth and communication was clear throughout.",
   },
 ];
 
@@ -76,7 +79,7 @@ export default function ReviewSection() {
   };
 
   return (
-    <div className="w-screen relative px-2 md:px-5 overflow-x-hidden mt-12 md:mt-[150px]">
+    <div className="w-screen relative px-2 md:px-5 pt-24 md:pt-[150px] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           align="left"
@@ -127,20 +130,27 @@ export default function ReviewSection() {
           description="It is a long established fact that a reader will be distracted by the readable content of a page."
         />
       </div>
+      <div className="absolute bottom-[35px] -left-20 -z-10 rotate-225">
+        <HeroLeftBottomTopBorder />
+      </div>
+      <div className="absolute bottom-[100px] -left-20 -z-10 rotate-225">
+        <HeroLeftBottomBottomBorder />
+      </div>
+
       <div
-        className="w-full flex justify-center overflow-x-hidden mt-5 md:mt-8"
+        className="w-full flex justify-center overflow-x-hidden mt-14"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
         style={{ userSelect: "none" }}
       >
         <div ref={marqueeRef} style={marqueeStyle}>
-          {[...reviews, ...reviews].map((review, i) => (
+          {[...reviews, ...reviews].map((reviews, i) => (
             <div
               key={i}
               style={{ minWidth: 373, maxWidth: 373 }}
               className="mx-2"
             >
-              <ReviewCard {...review} />
+              <ReviewCard {...reviews} />
             </div>
           ))}
         </div>
