@@ -462,7 +462,7 @@ export default function BestPlan() {
         {/* Pricing Cards Layout */}
         <div className="w-full">
           <motion.div
-            className="w-full bg-white/2 rounded-[20px] best-pricing-shadow p-2 md:px-10 md:py-8 flex flex-col mt-3"
+            className="w-full bg-white/3 rounded-[20px] best-pricing-shadow p-2 md:px-10 md:py-8 flex flex-col mt-3"
             variants={fadeIn}
           >
             {/* Responsive scroll wrapper for feature list + plan cards */}
@@ -541,7 +541,7 @@ export default function BestPlan() {
                     <motion.button
                       whileHover={{ scale: 1.04 }}
                       whileTap={{ scale: 0.97 }}
-                      className="w-full mt-3 sm:mt-4 md:mt-5 py-2 sm:py-3 rounded-xl text-white/90 text-base sm:text-lg font-medium border border-white/10 transition-all pricing-shadow2 cursor-pointer"
+                      className="w-full mt-3 sm:mt-4 md:mt-5 py-2 sm:py-3 rounded-xl text-white/90 bg-white/10 text-base sm:text-lg font-medium border border-white/10 transition-all pricing-shadow2 cursor-pointer"
                     >
                       Start Challenge
                     </motion.button>

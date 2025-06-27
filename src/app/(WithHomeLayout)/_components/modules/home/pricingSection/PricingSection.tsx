@@ -370,7 +370,7 @@ export default function PricingSection() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="flex flex-col md:flex-row gap-6 justify-center my-10"
+        className="flex flex-col md:flex-row gap-6 justify-center my-10 md:mx-12"
       >
         {plans.map((plan) => (
           <motion.div
