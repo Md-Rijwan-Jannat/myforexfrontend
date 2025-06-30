@@ -51,7 +51,7 @@ export default function Footer() {
             "Contact Us",
             "Testimonials",
           ].map((label) => (
-            <Link key={label} href="#" className="tracking-wide">
+            <Link key={label} href="#" className="tracking-wide text-white/70">
               {label}
             </Link>
           ))}

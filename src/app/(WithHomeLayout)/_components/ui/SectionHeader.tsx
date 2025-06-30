@@ -111,7 +111,7 @@ export default function SectionHeader({
             <div className="bg-gradient-to-br from-white/20 to-transparent size-10 rounded-full p-2 flex items-center justify-center">
               {icon}
             </div>
-            <h4 className="text-[20px] font-medium tracking-wide mr-2">
+            <h4 className="text-[20px] font-medium tracking-wide mr-2 text-white/90">
               {subtitle}
             </h4>
           </motion.div>

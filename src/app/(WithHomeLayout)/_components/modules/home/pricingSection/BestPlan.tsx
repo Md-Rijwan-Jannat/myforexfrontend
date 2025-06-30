@@ -478,7 +478,7 @@ export default function BestPlan() {
                   className="flex flex-col justify-between py-2 w-fit min-w-[160px] sm:min-w-[180px] md:min-w-[220px]"
                   variants={itemVariants}
                 >
-                  <div className="text-[30px] font-medium text-left pb-4 -mt-2">
+                  <div className="text-[30px] font-medium text-left pb-4 -mt-2 text-white">
                     Account Size
                   </div>
                   <div className="flex-1 flex flex-col gap-2 mt-6">
@@ -510,7 +510,7 @@ export default function BestPlan() {
                     whileTap="tap"
                     transition={{ delay: 0.08 * idx }}
                   >
-                    <div className="text-[22px] sm:text-[26px] md:text-[30px] font-normal pb-3 sm:pb-4 md:pb-6 text-center w-full break-words">
+                    <div className="text-[22px] sm:text-[26px] md:text-[30px] font-normal pb-3 sm:pb-4 md:pb-6 text-center w-full break-words text-white">
                       {plan.price}
                     </div>
                     <div className="flex-1 flex flex-col gap-2 w-full best-pricing-shadow rounded-[20px] px-3 py-4 sm:px-4 sm:py-5 md:px-6 md:py-6 min-w-[150px] sm:min-w-[170px] md:min-w-[195px]">

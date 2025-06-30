@@ -76,7 +76,7 @@ export default function FaqSection() {
       <div className="w-full md:w-1/3">
         <SectionHeader
           align="left"
-          icon={<FaRegQuestionCircle />}
+          icon={<FaRegQuestionCircle className="text-white" size={20} />}
           subtitle="FAQs"
           title="Frequently Asked Questions?"
           className="mb-0 md:mb-0"

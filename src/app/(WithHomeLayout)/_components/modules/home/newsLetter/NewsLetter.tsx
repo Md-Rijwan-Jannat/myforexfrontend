@@ -26,7 +26,7 @@ const fadeSlideUp: Variants = {
 export default function NewsLetter() {
   return (
     <motion.div
-      className="max-w-7xl mx-auto relative px-2 md:px-5 overflow-x-hidden mt-12 md:mt-[150px]"
+      className="max-w-7xl mx-auto relative px-2 md:px-5 overflow-x-hidden mt-12 md:mt-[150px] overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -66,7 +66,7 @@ export default function NewsLetter() {
               name="email"
               id="email"
               placeholder="Enter email"
-              className="focus:outline-none border-none placeholder:text-white/70 text-[14px] ml-4"
+              className="focus:outline-none border-none placeholder:text-white/70 text-[14px] ml-4 text-white/70"
             />
             <button className="text-[14px text-white/70 px-4 py-2 rounded-[8px] bg-white/10">
               Submit

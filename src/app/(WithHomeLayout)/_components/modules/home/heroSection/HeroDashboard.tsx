@@ -217,7 +217,9 @@ export default function HeroDashboard() {
                     className="size-7 object-cover rounded-full"
                   />
                 </div>
-                <p className="text-[10px]">Choose your account blow</p>
+                <p className="text-[10px] text-white/60">
+                  Choose your account blow
+                </p>
                 <IoIosArrowDown className="text-gray-400/70" />
               </div>
             </div>
@@ -229,7 +231,7 @@ export default function HeroDashboard() {
                   {/* Total Earned Card */}
                   <div className="flex flex-col items-start justify-between gap-4 pricing-gradient backdrop-blur-md border border-purple-500/10 rounded-xl py-3 px-4 shadow-lg">
                     <div className="bg-white/10 rounded p-2">
-                      <LuChartColumn className="size-4" />
+                      <LuChartColumn className="size-4 text-white" />
                     </div>
                     <div className="flex flex-row justify-between items-center gap-3 w-full">
                       <div className="flex flex-col gap-1">

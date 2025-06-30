@@ -88,17 +88,17 @@ const OverviewChart: React.FC<OverviewChartProps> = ({
         <div className="flex flex-warp items-center space-x-2 mt-2 md:mt-0">
           <div className="flex flex-row items-center gap-1">
             <div className="size-2 rounded-full bg-gradient-to-r from-[#5C35EE] to-[#644490] mb-[1px]"></div>
-            <span className="text-[6px]">Balance</span>
+            <span className="text-[6px] text-white/50">Balance</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="size-2 rounded-full border border-indigo-500 mb-[1px]"></div>
-            <span className="text-[6px]">Earning</span>
+            <span className="text-[6px] text-white/50">Earning</span>
           </div>
           <div className="flex rounded-lg gap-1.5">
             {["Day", "Week", "Month", "Year"].map((mode, index) => (
               <button
                 key={mode}
-                className={`px-2.5 py-1 flex items-center gap-2 rounded bg-white/10 text-[8px] font-normal transition-colors ${
+                className={`px-2.5 py-1 flex items-center gap-2 rounded bg-white/10 text-white/50 text-[8px] font-normal transition-colors ${
                   index === 0 && "bg-gradient-to-r from-[#5C35EE] to-[#644490]"
                 }`}
               >
